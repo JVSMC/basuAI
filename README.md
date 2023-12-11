@@ -19,6 +19,9 @@ Proposal to strengthen recycling culture, based on supermarket items. Your ecolo
 > [!IMPORTANT]
 > Currently, Basu is only available in desktop versions.
 
+> [!IMPORTANT]
+> The backend service is on the Render platform, you may experience slight delays in requests
+
 <a id='mission2'></a>
 
 - ## Mission
@@ -90,6 +93,9 @@ Propuesta para reforzar la cultura del reciclaje, basada en los artículos de su
 
 > [!IMPORTANT]
 > Por el momento, Basu solo se encuentra disponible en versiones de escritorio.
+
+> [!IMPORTANT]
+> El servicio de backend está en la plataforma Render, es probable que se experimenten ligeros retrasos en las peticiones
 
 <a id='mision2'></a>
 
