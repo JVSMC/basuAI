@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import '../table/TableData.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareMinus } from '@fortawesome/free-regular-svg-icons';
+import { Toaster, toast } from 'sonner'
+
+import '../table/TableData.css';
+
 
 function TableData({ items, onSendItems, onRemoveItem }) {
 
@@ -14,15 +17,16 @@ function TableData({ items, onSendItems, onRemoveItem }) {
     const handleSendItems = () => {
         // Verificar si hay elementos en la tabla
         if (items.length === 0) {
-            alert('La tabla está vacía. Agregue elementos antes de enviar.');
+            // alert('La tabla está vacía. Agregue elementos antes de enviar.');
+            toast.warning('Ups! You need to add an item');
             return;
         }
 
-        // Convertir la lista de items a formato JSON
+        // Convert the list of items to JSON format
         const json = JSON.stringify(items, null, 2);
         setJsonItems(json);
 
-        // Llamar a la función para enviar los items a la API
+        // Call the function to send the items to API
         onSendItems(json);
         
     };
@@ -30,10 +34,11 @@ function TableData({ items, onSendItems, onRemoveItem }) {
     return (
         <>
             <table className='items-data-container'>
+            <Toaster richColors/>
                 <thead>
                     <tr>
-                        <th>Producto</th>
-                        <th>Contenedor</th>
+                        <th>Product</th>
+                        <th>Container</th>
                         <th>Material</th>
                         <th> </th>
                     </tr>
@@ -57,7 +62,7 @@ function TableData({ items, onSendItems, onRemoveItem }) {
             <button onClick={handleSendItems}
                 className='cta round make-project'
             >
-                Generar proyecto
+                Build a project
             </button>
 
             {/* <pre>{jsonItems}</pre> */}

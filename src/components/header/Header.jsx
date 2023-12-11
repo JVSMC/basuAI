@@ -3,7 +3,7 @@ function Header() {
         <>
             <h1>Basu !!</h1>
             <p>
-            Tu aliado ecológico, vincula tus compras con proyectos verdes. Descubre iniciativas sustentables al hacer tus elecciones. ¡Compra con propósito, construye un futuro más verde con BASU!
+            A proposal to reinforce recycling culture based on supermarket items. Your ecological ally, linking your purchases to green projects. Discover sustainable initiatives while making your choices. Shop with purpose, build a greener future with BASU!
             </p>
         </>
      );

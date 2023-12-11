@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Toaster, toast } from 'sonner'
+
 import '../additem/AddItem.css'
 import DropDown from '../dropdown/DropDown';
 
@@ -16,8 +18,8 @@ function AddItem({ onAddItem }) {
     const [contianer, setContainer] = useState('');
     const [material, setMaterial] = useState('');
 
-    const containerOpt = ['Caja', 'Botella', 'Bolsa', 'Lata'];
-    const materialOpt = ['Carton', 'Vidrio', 'Plastico', 'Aluminio'];
+    const containerOpt = ['Box', 'Bottle', 'Bag', 'Can', 'Grid'];
+    const materialOpt = ['Cardboard', 'Glass', 'Plastic', 'Aluminium', 'Fabric'];
 
     /**
      * The handleSubmit function prevents the form from being submitted automatically, checks if all
@@ -29,7 +31,8 @@ function AddItem({ onAddItem }) {
         event.preventDefault(); // Evita que se envíe el formulario automáticamente
 
         if (!item || !contianer || !material) {
-            alert('Por favor, complete todos los campos');
+            //alert('Por favor, complete todos los campos');
+            toast.warning('Ups! there are some fields empty!')
             return;
         }
 
@@ -49,14 +52,15 @@ function AddItem({ onAddItem }) {
 
     return (
         <form onSubmit={handleSubmit}>
+             <Toaster richColors/>
             <input type="text"
                 value={item}
                 onChange={(e) => setItem(e.target.value)}
-                placeholder='Producto'
+                placeholder='Product'
                 className='round'
             />
             <DropDown
-                txtDes='Contenedor'
+                txtDes='Container'
                 dataOpt={containerOpt}
                 valueOp={contianer}
                 handleValueOp={setContainer}
@@ -67,7 +71,7 @@ function AddItem({ onAddItem }) {
                 valueOp={material}
                 handleValueOp={setMaterial}
             />
-            <button type="submit" className='round cta'>Agregar</button>
+            <button type="submit" className='round cta'>Add</button>
         </form>
     );
 }
