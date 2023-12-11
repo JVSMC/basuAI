@@ -1,0 +1,72 @@
+.items-data-container::-webkit-scrollbar {
+    width: 7px;
+    background: yellow;
+}
+
+.items-data-container::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: red;
+}
+
+.items-data-container::-webkit-scrollbar-thumb:hover {
+    background-color: blue;
+}
+
+
+.items-data-container thead th:not(:last-child),
+.items-data-container tbody td:not(:last-child) {
+    width: 33.3%;
+}
+
+.items-data-container thead {
+    border-bottom: 2px solid var(--Rose-taupe);
+}
+
+.items-data-container thead tr th {
+    font-weight: 400;
+}
+
+.items-data-container th,
+.items-data-container td {
+    padding: 1rem 2rem;
+    /* width: 25%; */
+    text-align: left;
+}
+
+tbody tr {
+    transition: all .3s ease-in;
+}
+
+.items-data-container tbody tr td:first-child{
+    font-weight:600 ;
+}
+
+.items-data-container tbody tr:hover {
+    background-color: var(--Emerald);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    cursor: default;
+}
+
+.items-data-container tbody tr td:first-child>button {
+    font-weight: 600;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.items-data-container tbody tr td:last-child {
+    text-align: right;
+    position: relative;
+}
+
+.items-data-container tbody tr td:last-child button {
+    background-color: transparent;
+    color: var(--Mint-green);
+}
+
+.items-data-container tbody tr:hover td:last-child button {
+    color: var(--Rose-taupe);
+}
+
+.make-project {
+    margin-top: 2.5rem;
+}

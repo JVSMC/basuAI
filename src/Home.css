@@ -1,0 +1,71 @@
+.appHome{
+  display: flex;
+  height: 100dvh;
+}
+
+.appHome > section {
+  height: 100%;
+  /* background-color: red; */
+  width: 100%;
+  padding: 4.5rem;
+}
+
+.appHome .left-container {
+  background-color: var(--Emerald);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.appHome .right-container {
+  background-color: var(--Mint-green);
+}
+
+.right-container{
+  overflow-x: hidden;
+}
+
+.right-container::-webkit-scrollbar {
+  width: 7px;
+  background-color: var(--Mint);
+}
+
+.right-container::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: var(--Mint-green);
+}
+
+.right-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--Dark-purple);
+}
+
+@keyframes circle-in-hesitate {
+  0% {
+    clip-path: circle(0%);
+  }
+  40% {
+    clip-path: circle(40%);
+  }
+  100% {
+    clip-path: circle(125%);
+  }
+}
+
+[transition-style="in:circle:hesitate"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-hesitate both;
+}
+
+
+@keyframes circle-in-top-right {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(150% at top right);
+  }
+}
+
+[transition-style="in:circle:top-right"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
+  background-color: var(--Mint) !important;
+}

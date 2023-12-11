@@ -1,0 +1,8 @@
+form {
+    margin: 2.5rem 0;
+    display: flex;
+}
+
+form button{
+    margin-left: 1.5rem;
+}
