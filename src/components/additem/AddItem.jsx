@@ -66,12 +66,12 @@ function AddItem({ onAddItem }) {
                 handleValueOp={setContainer}
             />
             <DropDown
-                txtDes='Meterial'
+                txtDes='Material'
                 dataOpt={materialOpt}
                 valueOp={material}
                 handleValueOp={setMaterial}
             />
-            <button type="submit" className='round cta'>Add</button>
+            <button type="submit" className='round cta'>Add new item</button>
         </form>
     );
 }

@@ -1,8 +1,32 @@
 form {
     margin: 2.5rem 0;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-form button{
-    margin-left: 1.5rem;
+
+form button,
+form input,
+form .dropdown {
+    margin-bottom: 1.5rem;
+}
+
+
+
+@media (max-width: 1440px) {
+    form {
+        justify-content: left;
+    }
+
+    form input,
+    form .dropdown {
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 960px) {
+    form {
+        flex-direction: column;
+    }
 }

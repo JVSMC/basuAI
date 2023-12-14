@@ -2,7 +2,7 @@
 
 :root {
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 12px;
 
   /*Brand colors*/
   --Mint: #30af82;
@@ -179,46 +179,20 @@ table {
 }
 
 
-@media (max-width: 1328px) {
-  :root {
-    font-size: 13px;
-  }
+@media (max-width: 1440px) {
+  
 }
 
 @media (max-width: 960px) {
-  h1 {
-    font-size: var(--Main-title-med);
-  }
-
-  h2 {
-    font-size: var(--Main-subtitle-med);
-  }
-
-  section {
-    margin: 4.31rem 5.2rem;
-  }
+  
 }
 
 @media (max-width: 767px) {
-  h2 {
-    font-size: 3.2rem;
-  }
+
 }
 
 @media (max-width: 480px) {
   :root {
-    font-size: 11px;
-  }
-
-  h1 {
-    margin: 0 3.5rem;
-  }
-
-  h2 {
-    text-align: center;
-  }
-
-  section {
-    margin: 3.5rem;
+    font-size: 10px;
   }
 }
