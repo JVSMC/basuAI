@@ -22,7 +22,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         {isMobile ? (
-          <Route index element={<h1>Disculpa, la vista mobil no está disponible</h1>} />
+          <Route index element={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+            <h1>Sorry, the mobile view is not available.</h1>
+          </div>} />
         ) : (
           <Route index element={<Home />} />
         )}
